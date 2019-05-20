@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BuildTestApp.Helpers;
 using Xamarin.Forms;
 
 namespace BuildTestApp
@@ -12,7 +8,7 @@ namespace BuildTestApp
         public MainPage()
         {
             InitializeComponent();
-            ServiceName.Text = AppSettingsManager.Settings["Service"];
+            ServiceName.Text = $"This is '{Secrets.Environment}' environment";
         }
     }
 }
