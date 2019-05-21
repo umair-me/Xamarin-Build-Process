@@ -71,3 +71,5 @@ jobs:
       configuration: 'Ad-Hoc'
       buildForSimulator: false
       packageApp: true
+    env:
+      Secret_Environment: $(Secret_Environment)
