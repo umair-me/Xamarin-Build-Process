@@ -25,6 +25,8 @@ jobs:
       projectFile: '**/*droid*.csproj'
       outputDirectory: '$(outputDirectory)'
       configuration: '$(buildConfiguration)'
+    env:
+      Secret_Environment: $(Secret_Environment)
 
   - task: AndroidSigning@3
     inputs:
@@ -33,8 +35,6 @@ jobs:
       apksignerKeystorePassword: '$(keystore-password)'
       apksignerKeystoreAlias: '$(keystore-alias)'
       apksignerKeyPassword: '$(keystore-key-password)'
-    env:
-      Secret_Environment: $(Secret_Environment)
 
 #iOS
 - job: iOS
