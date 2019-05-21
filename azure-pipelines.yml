@@ -33,6 +33,8 @@ jobs:
       apksignerKeystorePassword: '$(keystore-password)'
       apksignerKeystoreAlias: '$(keystore-alias)'
       apksignerKeyPassword: '$(keystore-key-password)'
+    env:
+      Secret_Environment: $(Secret_Environment)
 
 #iOS
 - job: iOS
